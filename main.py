@@ -31,7 +31,7 @@ def main():
     # Threading state
     is_sending = False
     
-    print("Starting ASL to LLM...")
+    print("Starting Live Cam Feed...")
     print("Press 'q' to quit")
     print("Gestures:")
     for gesture, word in config.GESTURE_MAP.items():
@@ -123,7 +123,7 @@ def main():
                 landmarks
             )
             
-            cv2.imshow('ASL to LLM', frame_with_overlays)
+            cv2.imshow('Live Camera Feed', frame_with_overlays)
             
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
