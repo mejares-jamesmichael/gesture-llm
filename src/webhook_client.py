@@ -27,12 +27,12 @@ class WebhookClient:
             print(f"Payload: {payload}")
             
             # Try POST first
-            response = requests.post(self.url, json=payload, headers=headers, timeout=10)
+            response = requests.post(self.url, json=payload, headers=headers, timeout=15)
             
             # If POST fails with 404, try GET with query parameters
             if response.status_code == 404 and "not registered for POST" in response.text:
                 print("POST failed, trying GET request...")
-                response = requests.get(self.url, params=payload, headers=headers, timeout=10)
+                response = requests.get(self.url, params=payload, headers=headers, timeout=15)
             
             print(f"Response status: {response.status_code}")
             print(f"Response body: {response.text[:200]}")
