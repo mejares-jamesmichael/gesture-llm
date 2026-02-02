@@ -1,4 +1,4 @@
-# ASL to LLM - Rule-based Sign Language Detection
+# Gesture to LLM - Rule-based Sign Language Detection
 
 A simple hobby project that detects hand gestures using MediaPipe and sends text to an n8n chat agent.
 
